@@ -40,3 +40,12 @@ public class RoomTest {
 
         assertFalse(room.isOccupied());
     }
+
+    @Test
+    void cleanRoom_ShouldCleanDirtyRoom() {
+        Room room = new Room(2, 100.00, false, true);
+
+        room.cleanRoom();
+
+        assertFalse(room.isDirty());
+    }
