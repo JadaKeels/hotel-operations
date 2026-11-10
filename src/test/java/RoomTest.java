@@ -23,3 +23,11 @@ public class RoomTest {
         assertTrue(room.isOccupied());
     }
 
+    @Test
+    void checkIn_WhenDirty_ShouldNotOccupyRoom() {
+        Room room = new Room(2, 100.00, false, true);
+
+        room.checkIn();
+
+        assertFalse(room.isOccupied());
+    }
