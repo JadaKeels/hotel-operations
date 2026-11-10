@@ -31,3 +31,12 @@ public class RoomTest {
 
         assertFalse(room.isOccupied());
     }
+
+    @Test
+    void checkOut_ShouldVacateRoom() {
+        Room room = new Room(2, 100.00, true, true);
+
+        room.checkOut();
+
+        assertFalse(room.isOccupied());
+    }
