@@ -6,4 +6,18 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class EmployeeTest {
 
-}
+    @Test
+    public void punchIn_shouldStoreStartTime() {
+
+        Employee employee =
+                new Employee(
+                        1,
+                        "John Doe",
+                        "Front Desk",
+                        20.00);
+
+        employee.punchIn(800);
+
+        assertEquals(800, employee.getStartTime());
+    }
+
